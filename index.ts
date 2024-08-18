@@ -50,7 +50,6 @@ const count_a_to_b_by_simulation = (m, n) => {
     if (!choosed_position) {
       // 满足所有点都经过(total_step)) && 满足最后一个点刚好等于 b点
       if (a_point.step === axis.total_step && a_point.position.toString() === a_point.destination.toString()) {
-        console.log(a_point.passing_map)
         count = count + 1;
       }
       a_point.roll_back();
@@ -67,7 +66,17 @@ const count_a_to_b_by_simulation = (m, n) => {
 
 
 // console.log(count_a_to_b_by_simulation(5, 7))
-console.log(solve(2, 4));
+// console.log(solve(3, 8));
+// console.log(count_a_to_b_by_simulation(3, 5));
+// 编写一段程序求解:m2、3、4，n=6、7、8时的所有组合情况
 
+console.log("m=2, n=6, result is ", solve(2, 6));
+console.log("m=2, n=7, result is ", solve(2, 7));
+console.log("m=2, n=8, result is ", solve(2, 8));
+console.log("m=3, n=6, result is ", solve(3, 6));
+console.log("m=3, n=7, result is ", solve(3, 7));
+console.log("m=3, n=8, result is ", solve(3, 8));
+console.log("m=4, n=6, result is ", solve(4, 6));
+console.log("m=4, n=7, result is ", solve(4, 7));
+console.log("m=4, n=8, result is ", solve(4, 8));
 
-// console.log(process.argv[2], process.argv[3]);

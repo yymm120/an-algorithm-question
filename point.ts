@@ -141,7 +141,7 @@ export class Point {
 
 
   /**
-   * 选择一个坐标, 返回选择的坐标和roll_back_info
+   * 选择一个坐标, 返回选择的坐标
    */
   choose_position(): { choosed_position: [number, number] | undefined } {
     let choosed_position: [number, number] | undefined = undefined;
@@ -178,7 +178,6 @@ export class Point {
 
 
   roll_back() {
-    // 当所有passing_map中choosed属性都等于true后, 设置done = true
     if (this.step <= 0) {
       this.done = true;
       return this;
